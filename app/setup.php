@@ -66,6 +66,22 @@ add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 
     /**
+     * Enable custom header
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
+     */
+      // Add theme support for Custom Header
+    $header_args = array(
+        'flex-width'             => true,
+        'flex-height'            => true,
+        'uploads'                => true,
+        'random-default'         => true,
+        'header-text'            => true,
+        'video'                  => false,
+        'video-active-callback'  => '',
+    );
+    add_theme_support( 'custom-header', $header_args );
+
+    /**
      * Register navigation menus
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
